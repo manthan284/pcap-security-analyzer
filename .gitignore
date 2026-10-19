@@ -1,0 +1,30 @@
+
+# Python cache files
+__pycache__/
+*.py[cod]
+
+# Virtual environment
+.venv/
+venv/
+
+# Environment variables and secrets
+.env
+.env.*
+
+# Local packet captures
+*.pcap
+*.pcapng
+
+# Temporary uploaded capture
+uploaded_capture.pcap
+
+# Generated reports
+security_findings.csv
+
+# IDE and editor files
+.vscode/
+.idea/
+
+# Operating system files
+.DS_Store
+Thumbs.db
