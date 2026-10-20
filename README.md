@@ -1,6 +1,17 @@
 # PCAP Security Analyzer
 
-A Python-based network traffic analysis tool that examines PCAP and PCAPNG files to identify protocol activity, network conversations, and potential security indicators through an interactive Streamlit dashboard.
+A Python-based network traffic analysis tool that examines PCAP and PCAPNG files to summarize network activity and identify potential security indicators through an interactive Streamlit dashboard.
+
+## Dashboard Preview
+
+### 1. Dashboard Overview
+![PCAP Security Analyzer Dashboard](screenshots/dashboard.png)
+
+### 2. Security Findings
+![Security Findings](screenshots/security-findings.png)
+
+### 3. CSV Report Export
+![CSV Report Export](screenshots/csv-export.png)
 
 ## Features
 
@@ -11,8 +22,8 @@ A Python-based network traffic analysis tool that examines PCAP and PCAPNG files
 - **TCP Flag Analysis:** Visualizes TCP flag activity.
 - **Network Conversations:** Reviews communication between network endpoints.
 - **Security Detection:** Flags cleartext traffic, high-risk port activity, possible SYN scans, and repeated TCP resets.
-- **Severity Labels:** Assigns preliminary rule-based severity levels to findings.
-- **CSV Export:** Downloads detected security findings for further analysis.
+- **Severity Labels:** Assigns preliminary rule-based severity levels.
+- **CSV Export:** Downloads security findings for further analysis.
 
 ## Technology Stack
 
@@ -26,8 +37,8 @@ A Python-based network traffic analysis tool that examines PCAP and PCAPNG files
 ### 1. Clone the repository
 
 ```bash
-git clone YOUR_GITHUB_REPOSITORY_URL
-cd pcap-analyzer
+git clone https://github.com/manthan284/pcap-security-analyzer.git
+cd pcap-security-analyzer
 ```
 
 ### 2. Create and activate a virtual environment
@@ -40,7 +51,7 @@ python -m venv .venv
 ### 3. Install dependencies
 
 ```bash
-pip install scapy streamlit pandas
+pip install -r requirements.txt
 ```
 
 ### 4. Run the application
@@ -56,20 +67,20 @@ Open the local URL displayed in the terminal.
 1. Launch the application.
 2. Upload a `.pcap` or `.pcapng` capture file.
 3. Explore protocol, IP, port, DNS, TCP flag, and conversation analysis.
-4. Review the security indicators.
-5. Download the findings as a CSV file.
+4. Review potential security indicators.
+5. Download findings as a CSV file.
 
 ## Detection Notes
 
-The analyzer uses rule-based heuristics. High-risk port activity, possible SYN scans, and repeated TCP resets are indicators that may warrant investigation; they do not independently establish malicious activity.
+The analyzer uses rule-based heuristics. High-risk port activity, possible SYN scans, and repeated TCP resets are indicators that may warrant investigation; they do not independently prove malicious activity.
 
 ## Future Improvements
 
-- Add AI-assisted analysis of detected security indicators.
-- Improve detection accuracy and reduce duplicate findings.
-- Expand IPv6 support and add automated testing.
-- Improve reporting and documentation.
+- AI-assisted analysis of security findings.
+- Improved detection accuracy and reduced duplicate findings.
+- Expanded IPv6 support and automated testing.
+- Enhanced reporting.
 
 ## Disclaimer
 
-Use this tool only on network captures you own or are authorized to analyze. Handle packet captures carefully because they may contain sensitive information.
+Use this tool only on network captures you own or are authorized to analyze. PCAP files may contain sensitive information, so handle them carefully.
